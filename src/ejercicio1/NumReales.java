@@ -2,6 +2,7 @@ package ejercicio1;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -42,6 +43,9 @@ public class NumReales {
 		} catch (FileNotFoundException e) {
 			//Mostramos que ha habido un error
 			System.err.println("No se ha encontrado el fichero");
+			System.err.println(e.getMessage());
+		}catch (IOException e) {
+			System.err.println("No se puede abrir el fichero");
 			System.err.println(e.getMessage());
 		}
 
