@@ -15,15 +15,13 @@ public class NumReales {
 		double media=0; //Se guaradara la media de los numeros
 		
 		//Creamos el Scanner
-		Scanner read = null;
+		Scanner read;
 
 		//Abrimos un bloque try-catch
 		try {
 			
 			// Inicializamos el Scanner con el nombre del fichero que queremos leer
-			read = new Scanner(new FileReader("src\\ejercicio1\\NumerosReale.txt"));
-			
-			read.useLocale(Locale.US);
+			read = new Scanner(new FileReader("src\\ejercicio1\\NumerosReales.txt"));
 			
 			//mientras que siga leyendo caracteres
 			while (read.hasNext()) {

@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Alumnos {
 
 	public static void main(String[] args) {
-		Scanner read; // Creamos la variable de tipo Scanner
+		Scanner read=null; // Creamos la variable de tipo Scanner
 		int edad = 0; // Se guardara la edad del alumno
 		String nombre; // Se guardara el nombre del alumno
 		double estatura = 0; // Se guardara la estatura del alumno
@@ -53,6 +53,7 @@ public class Alumnos {
 
 			}
 
+			//Calculados las medias de la edad y de la estatura
 			mediaEdad = (double)sumaEdad / cont;
 			mediaEst = sumaEstatura / cont;
 
@@ -65,10 +66,15 @@ public class Alumnos {
 			System.err.println("No se ha logrado encontrar el fichero");
 			System.err.println(e.getMessage());
 
-			// Capturamos el error de no poder abrir el i
+			// Capturamos el error de no poder abrir el fichero
 		} catch (IOException e) {
+			//Mostramos el mensaje de error
 			System.err.println("No se ha logrado abrir el fichero");
 			System.err.println(e.getMessage());
+		// Finalmente	
+		}finally {
+			//Cerramos el Scanner 
+			read.close();
 		}
 
 	}

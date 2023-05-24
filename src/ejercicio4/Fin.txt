@@ -1,5 +1,4 @@
 hola
 yo
-me
-llamo
-juanma
+soy
+juanpi
